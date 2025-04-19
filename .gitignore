@@ -1,0 +1,48 @@
+# ===================
+# Node.js
+# ===================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.env
+
+# ===================
+# React (Create React App)
+# ===================
+# dependencies
+form/client/node_modules/
+
+# production
+form/client/build/
+
+# misc
+form/client/.env
+form/client/.env.local
+form/client/.env.development.local
+form/client/.env.test.local
+form/client/.env.production.local
+form/client/.DS_Store
+
+# testing
+form/client/coverage/
+
+# IDEs and editors
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.vscode/
+.idea/
+
+# Mac system files
+.DS_Store
+
+# Logs
+logs
+*.log
+
+# OS generated
+Thumbs.db
+ehthumbs.db

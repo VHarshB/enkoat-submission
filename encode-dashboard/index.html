@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon" />
+    <title>Enkoat Performance Dashboard</title>
+
+    <!-- ========== All CSS files linkup ========= -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/lineicons.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/fullcalendar.css" />
+    <link rel="stylesheet" href="assets/css/fullcalendar.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/theme.css">
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- ======== Preloader =========== -->
+    <div id="preloader">
+      <div class="spinner"></div>
+    </div>
+    <!-- ======== Preloader =========== -->
+
+    <!-- ======== sidebar-nav start =========== -->
+    <aside class="sidebar-nav-wrapper">
+      <div class="navbar-logo">
+        <h2 class="brand-title">EnKoat</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="nav-item">
+            <a
+              href="index.html"
+            >
+              <span class="icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.74999 18.3333C12.2376 18.3333 15.1364 15.8128 15.7244 12.4941C15.8448 11.8143 15.2737 11.25 14.5833 11.25H9.99999C9.30966 11.25 8.74999 10.6903 8.74999 10V5.41666C8.74999 4.7263 8.18563 4.15512 7.50586 4.27556C4.18711 4.86357 1.66666 7.76243 1.66666 11.25C1.66666 15.162 4.83797 18.3333 8.74999 18.3333Z" />
+                  <path
+                    d="M17.0833 10C17.7737 10 18.3432 9.43708 18.2408 8.75433C17.7005 5.14918 14.8508 2.29947 11.2457 1.75912C10.5629 1.6568 10 2.2263 10 2.91665V9.16666C10 9.62691 10.3731 10 10.8333 10H17.0833Z" />
+                </svg>
+              </span>
+              <span class="text">Charts</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="lists.html"
+            >
+              <span class="icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.74999 18.3333C12.2376 18.3333 15.1364 15.8128 15.7244 12.4941C15.8448 11.8143 15.2737 11.25 14.5833 11.25H9.99999C9.30966 11.25 8.74999 10.6903 8.74999 10V5.41666C8.74999 4.7263 8.18563 4.15512 7.50586 4.27556C4.18711 4.86357 1.66666 7.76243 1.66666 11.25C1.66666 15.162 4.83797 18.3333 8.74999 18.3333Z" />
+                  <path
+                    d="M17.0833 10C17.7737 10 18.3432 9.43708 18.2408 8.75433C17.7005 5.14918 14.8508 2.29947 11.2457 1.75912C10.5629 1.6568 10 2.2263 10 2.91665V9.16666C10 9.62691 10.3731 10 10.8333 10H17.0833Z" />
+                </svg>
+              </span>
+              <span class="text">List</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+     
+    </aside>
+    <div class="overlay"></div>
+    <!-- ======== sidebar-nav end =========== -->
+
+    <!-- ======== main-wrapper start =========== -->
+    <main class="main-wrapper">
+      <!-- ========== header start ========== -->
+      <header class="header">
+        <div class="container-fluid">
+          <div class="row">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- ========== header end ========== -->
+
+      <!-- ========== section start ========== -->
+      <section class="section">
+        <div class="container-fluid">
+          <!-- ========== title-wrapper start ========== -->
+          <div class="title-wrapper pt-30">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <div class="title">
+                  <h2>Performance Dashboard</h2>
+                </div>
+              </div>
+              <!-- end col -->
+              <div class="col-md-6">
+                <div class="breadcrumb-wrapper">
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+          </div>
+          <!-- End Row -->
+          <div class="row">
+            <div class="col-lg-12">
+              
+            </div>
+            <!-- End Col -->
+          </div>
+          <!-- End Row -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card-style mb-30">
+                <div class="title d-flex justify-content-between align-items-center">
+                  <div class="left">
+                    <h6 class="text-medium mb-30"></h6>
+                  </div>
+                </div>
+                <!-- End Title -->
+                <canvas id="barChart"></canvas>
+
+              </div>
+            </div>
+            <!-- End Col -->
+         
+            <!-- End Col -->
+          </div>
+
+          
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card-style mb-30">
+                <div class="title d-flex justify-content-between align-items-center">
+                  <div class="left">
+                    <h6 class="text-medium mb-30"></h6>
+                  </div>
+                </div>
+                <!-- End Title -->
+                <canvas id="pieChart"></canvas>
+
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card-style mb-30">
+                <div class="title d-flex justify-content-between align-items-center">
+                  <div class="left">
+                    <h6 class="text-medium mb-30"></h6>
+                  </div>
+                </div>
+                <!-- End Title -->
+                <canvas id="lineChart"></canvas>
+
+              </div>
+            </div>
+  
+          </div>
+
+          
+          <div class="row">
+            
+          </div>
+        
+          </div>
+        
+        </div>
+        <!-- end container -->
+      </section>
+      <!-- ========== section end ========== -->
+
+      <!-- ========== footer start =========== -->
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 order-last order-md-first">
+              <div class="copyright text-center text-md-start">
+                <p class="text-sm">
+                </p>
+              </div>
+            </div>
+            <!-- end col-->
+            <div class="col-md-6">
+              <div class="terms d-flex justify-content-center justify-content-md-end">
+                <a href="#0" class="text-sm">Developed by</a>
+                <a href="#0" class="text-sm ml-15">Harsh Vaishya</a>
+              </div>
+            </div>
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- end container -->
+      </footer>
+      <!-- ========== footer end =========== -->
+    </main>
+    <!-- ======== main-wrapper end =========== -->
+
+    <!-- ========= All Javascript files linkup ======== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Chart.min.js"></script>
+    <script src="assets/js/dynamic-pie-chart.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/fullcalendar.js"></script>
+    <script src="assets/js/jvectormap.min.js"></script>
+    <script src="assets/js/world-merc.js"></script>
+    <script src="assets/js/polyfill.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        fetch('http://localhost:5000/quotes')
+          .then(response => response.json())
+          .then(data => {
+            const itemsPerPage = 10;
+            let currentPage = 0;
+      
+            const labels = data.map(d => d.project_state);
+            const values = data.map(d => Number(d.roof_size_sqft));
+      
+            const barCtx = document.getElementById('barChart').getContext('2d');
+            let barChart;
+      
+            function renderBarChart(page) {
+              const start = page * itemsPerPage;
+              const end = start + itemsPerPage;
+              const pagedLabels = labels.slice(start, end);
+              const pagedValues = values.slice(start, end);
+      
+              if (barChart) barChart.destroy();
+      
+              barChart = new Chart(barCtx, {
+                type: 'bar',
+                data: {
+                  labels: pagedLabels,
+                  datasets: [{
+                    label: 'Roof Size (sqft)',
+                    data: pagedValues,
+                    backgroundColor: 'rgba(42, 47, 85)',
+                    borderColor: 'rgba(42, 47, 85, 1)',
+                    hoverBackgroundColor: 'rgba(42, 47, 85, 0.6)',
+                    hoverBorderColor: 'rgba(42, 47, 85, 1)',
+                    borderWidth: 1
+                  }]
+                },
+                options: {
+                  responsive: true,
+                  animation: {
+                    duration: 1000,
+                    easing: 'easeInOutCubic'
+                  },
+                  plugins: {
+                    title: {
+                      display: true,
+                      text: 'Roof Size by State',
+                      font: {
+                        family: "'Roboto', sans-serif",
+                        size: 18,
+                        weight: 'bold'
+                      },
+                      color: '#333'
+                    },
+                    legend: {
+                      display: true,
+                      position: 'top',
+                      labels: {
+                        font: {
+                          family: "'Roboto', sans-serif",
+                          size: 14
+                        },
+                        color: '#555'
+                      }
+                    }
+                  },
+                  scales: {
+                    y: {
+                      beginAtZero: true,
+                      ticks: {
+                        color: '#555',
+                        font: {
+                          family: "'Roboto', sans-serif",
+                          size: 12
+                        }
+                      },
+                      grid: {
+                        color: 'rgba(0, 0, 0, 0.1)'
+                      }
+                    },
+                    x: {
+                      ticks: {
+                        color: '#555',
+                        font: {
+                          family: "'Roboto', sans-serif",
+                          size: 12
+                        }
+                      },
+                      grid: {
+                        color: 'rgba(0, 0, 0, 0.1)'
+                      }
+                    }
+                  }
+                }
+              });
+            }
+      
+            // Bar Chart Pagination Controls
+            const paginationDiv = document.createElement('div');
+            paginationDiv.style.display = 'flex';
+            paginationDiv.style.justifyContent = 'space-between';
+            paginationDiv.style.marginTop = '10px';
+            paginationDiv.style.position = 'relative';
+      
+            const prevBtn = document.createElement('button');
+            prevBtn.innerHTML = '←';
+            Object.assign(prevBtn.style, {
+              padding: '10px 20px',
+              backgroundColor: '#2a2f55',
+              color: '#fff',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: 'pointer',
+              fontSize: '18px',
+              fontFamily: "'Roboto', sans-serif"
+            });
+            prevBtn.onclick = () => {
+              if (currentPage > 0) {
+                currentPage--;
+                renderBarChart(currentPage);
+              }
+            };
+      
+            const nextBtn = document.createElement('button');
+            nextBtn.innerHTML = '→';
+            Object.assign(nextBtn.style, {
+              padding: '10px 20px',
+              backgroundColor: '#2a2f55',
+              color: '#fff',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: 'pointer',
+              fontSize: '18px',
+              fontFamily: "'Roboto', sans-serif"
+            });
+            nextBtn.onclick = () => {
+              if ((currentPage + 1) * itemsPerPage < labels.length) {
+                currentPage++;
+                renderBarChart(currentPage);
+              }
+            };
+      
+            paginationDiv.appendChild(prevBtn);
+            paginationDiv.appendChild(nextBtn);
+            document.getElementById('barChart').parentNode.appendChild(paginationDiv);
+            renderBarChart(currentPage);
+      
+            // Pie Chart - Roof Type Distribution
+            const typeCount = {};
+            data.forEach(d => {
+              typeCount[d.roof_type] = (typeCount[d.roof_type] || 0) + 1;
+            });
+      
+            const pieCtx = document.getElementById('pieChart').getContext('2d');
+            new Chart(pieCtx, {
+              type: 'pie',
+              data: {
+                labels: Object.keys(typeCount),
+                datasets: [{
+                  label: 'Roof Type Distribution',
+                  data: Object.values(typeCount),
+                  backgroundColor: 
+                  ['#2a2f55', '#4b90e2', '#7e5b8b', '#9b5d83', '#4c4a7b', '#2c6e83'],
+                  borderColor: '#fff',
+                  borderWidth: 2,
+                  hoverOffset: 10
+                }]
+              },
+              options: {
+                responsive: true,
+                plugins: {
+                  title: {
+                    display: true,
+                    text: 'Roof type distribution',
+                    font: {
+                      family: "'Roboto', sans-serif",
+                      size: 18,
+                      weight: 'bold'
+                    },
+                    color: '#333'
+                  },
+                  legend: {
+                    position: 'right',
+                    labels: {
+                      usePointStyle: true,
+                      padding: 20,
+                      font: {
+                        size: 14
+                      },
+                      color: '#555'
+                    }
+                  },
+                  tooltip: {
+                    callbacks: {
+                      label: function(context) {
+                        const label = context.label || '';
+                        const value = context.raw;
+                        const total = context.dataset.data.reduce((sum, val) => sum + val, 0);
+                        const percentage = ((value / total) * 100).toFixed(1);
+                        return `${label}: ${value} (${percentage}%)`;
+                      }
+                    }
+                  }
+                },
+                layout: {
+                  padding: 20
+                }
+              }
+            });
+      
+// Line Chart - Projects Completed Per Month
+const monthCount = {};
+data.forEach(d => {
+  if (d.project_date) {
+    const month = d.project_date.slice(0, 7); // Get year-month (e.g., "2023-05")
+    monthCount[month] = (monthCount[month] || 0) + 1;
+  }
+});
+
+const sortedMonths = Object.keys(monthCount).sort();
+const itemsPerPageLine = 6;
+let currentLinePage = 0;
+
+const lineCtx = document.getElementById('lineChart').getContext('2d');
+let lineChart;
+
+function renderLineChart(page) {
+  const start = page * itemsPerPageLine;
+  const end = start + itemsPerPageLine;
+  const pagedMonths = sortedMonths.slice(start, end);
+  const pagedCounts = pagedMonths.map(m => monthCount[m]);
+
+  if (lineChart) lineChart.destroy();
+
+  lineChart = new Chart(lineCtx, {
+    type: 'line',
+    data: {
+      labels: pagedMonths,
+      datasets: [{
+        label: 'Projects Completed',
+        data: pagedCounts,
+        tension: 0.3,
+        backgroundColor: 'rgba(42, 47, 85, 0.2)', // Light color fill
+        borderColor: 'rgba(42, 47, 85)', // Dark border color
+        borderWidth: 2,
+        fill: true,
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        title: {
+          display: true,
+          text: 'Projects Completed per Month',
+          font: {
+            family: "'Roboto', sans-serif",
+            size: 18,
+            weight: 'bold',
+          },
+          color: '#333',
+        },
+        legend: {
+          position: 'top',
+          labels: {
+            font: {
+              family: "'Roboto', sans-serif",
+              size: 14,
+            },
+            color: '#555',
+          },
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+}
+
+// Line Chart Pagination
+const linePaginationDiv = document.createElement('div');
+linePaginationDiv.style.display = 'flex';
+linePaginationDiv.style.justifyContent = 'space-between';
+linePaginationDiv.style.marginTop = '10px';
+
+const linePrevBtn = document.createElement('button');
+linePrevBtn.innerHTML = '←';
+linePrevBtn.style.padding = '5px 10px';
+linePrevBtn.style.backgroundColor = '#2a2f55';
+linePrevBtn.style.color = '#fff';
+linePrevBtn.style.border = 'none';
+linePrevBtn.style.cursor = 'pointer';
+linePrevBtn.onclick = () => {
+  if (currentLinePage > 0) {
+    currentLinePage--;
+    renderLineChart(currentLinePage);
+  }
+};
+
+const lineNextBtn = document.createElement('button');
+lineNextBtn.innerHTML = '→';
+lineNextBtn.style.padding = '5px 10px';
+lineNextBtn.style.backgroundColor = '#2a2f55';
+lineNextBtn.style.color = '#fff';
+lineNextBtn.style.border = 'none';
+lineNextBtn.style.cursor = 'pointer';
+lineNextBtn.onclick = () => {
+  if ((currentLinePage + 1) * itemsPerPageLine < sortedMonths.length) {
+    currentLinePage++;
+    renderLineChart(currentLinePage);
+  }
+};
+
+linePaginationDiv.appendChild(linePrevBtn);
+linePaginationDiv.appendChild(lineNextBtn);
+document.getElementById('lineChart').parentNode.appendChild(linePaginationDiv);
+
+// Initial render
+renderLineChart(currentLinePage);
+
+          })
+          .catch(error => {
+            console.error('Error fetching data:', error);
+          });
+      });
+      </script>
+      
+
+      
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+  </body>
+</html>

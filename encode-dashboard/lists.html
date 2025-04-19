@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon" />
+    <title>Enkoat Performance Dashboard</title>
+
+    <!-- ========== All CSS files linkup ========= -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/lineicons.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/fullcalendar.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/theme.css">
+
+  </head>
+  <body>
+    <!-- ======== Preloader =========== -->
+    <!-- ======== Preloader =========== -->
+
+    <!-- ======== sidebar-nav start =========== -->
+    <aside class="sidebar-nav-wrapper">
+        <div class="navbar-logo">
+          <h2 class="brand-title">EnKoat</h2>
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li class="nav-item">
+              <a
+                href="index.html"
+              >
+                <span class="icon">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M8.74999 18.3333C12.2376 18.3333 15.1364 15.8128 15.7244 12.4941C15.8448 11.8143 15.2737 11.25 14.5833 11.25H9.99999C9.30966 11.25 8.74999 10.6903 8.74999 10V5.41666C8.74999 4.7263 8.18563 4.15512 7.50586 4.27556C4.18711 4.86357 1.66666 7.76243 1.66666 11.25C1.66666 15.162 4.83797 18.3333 8.74999 18.3333Z" />
+                    <path
+                      d="M17.0833 10C17.7737 10 18.3432 9.43708 18.2408 8.75433C17.7005 5.14918 14.8508 2.29947 11.2457 1.75912C10.5629 1.6568 10 2.2263 10 2.91665V9.16666C10 9.62691 10.3731 10 10.8333 10H17.0833Z" />
+                  </svg>
+                </span>
+                <span class="text">Charts</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="lists.html"
+              >
+                <span class="icon">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M8.74999 18.3333C12.2376 18.3333 15.1364 15.8128 15.7244 12.4941C15.8448 11.8143 15.2737 11.25 14.5833 11.25H9.99999C9.30966 11.25 8.74999 10.6903 8.74999 10V5.41666C8.74999 4.7263 8.18563 4.15512 7.50586 4.27556C4.18711 4.86357 1.66666 7.76243 1.66666 11.25C1.66666 15.162 4.83797 18.3333 8.74999 18.3333Z" />
+                    <path
+                      d="M17.0833 10C17.7737 10 18.3432 9.43708 18.2408 8.75433C17.7005 5.14918 14.8508 2.29947 11.2457 1.75912C10.5629 1.6568 10 2.2263 10 2.91665V9.16666C10 9.62691 10.3731 10 10.8333 10H17.0833Z" />
+                  </svg>
+                </span>
+                <span class="text">List</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+       
+      </aside>
+    <!-- ======== sidebar-nav end =========== -->
+
+    <!-- ======== main-wrapper start =========== -->
+    <main class="main-wrapper">
+      <!-- ========== header start ========== -->
+      <header class="header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-5 col-md-5 col-6">
+              <div class="header-left d-flex align-items-center"></div>
+            </div>
+            <div class="col-lg-7 col-md-7 col-6">
+              <div class="header-right"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- ========== header end ========== -->
+
+      <!-- ========== section start ========== -->
+      <section class="section">
+        <div class="container-fluid">
+          <!-- ========== title-wrapper start ========== -->
+          <div class="title-wrapper pt-30">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <div class="title">
+                  <h2>Performance Dashboard</h2>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="breadcrumb-wrapper">
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                     
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ========== title-wrapper end ========== -->
+
+          <!-- ========== table section ========== -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card-style mb-30">
+              
+                <div class="d-flex align-items-center gap-2 mb-3 flex-wrap">
+                    
+                    <label class="form-label mb-0">Filters:</label>
+                  
+                    <div>
+                      <select id="dateFilter" class="form-select form-select-sm">
+                        <option value="all">All Months</option>
+                      </select>
+                    </div>
+                  
+                    <div>
+                      <select id="stateFilter" class="form-select form-select-sm">
+                        <option value="all">All Locations</option>
+                      </select>
+                    </div>
+                  
+                    <div>
+                      <select id="companyFilter" class="form-select form-select-sm">
+                        <option value="all">All Companies</option>
+                      </select>
+                    </div>
+                  
+                    <div>
+                      <select id="roofFilter" class="form-select form-select-sm">
+                        <option value="all">All Roof Types</option>
+                      </select>
+                    </div>
+
+                    <div>
+                        <select id="yearFilter" class="form-select form-select-sm">
+                          <option value="all">All Years</option>
+                        </select>
+                      </div>
+                      
+                  
+                  
+                      <div class="filter-container">
+                        <button id="clearFiltersButton" class="clear-filters">Clear Filters</button>
+                      </div>
+                      
+                  </div>
+                  
+                  
+                  
+                  
+                  
+                <div class="title d-flex justify-content-between align-items-center">
+                  <div class="left">
+                    <h6 class="text-medium mb-30"></h6>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table id="dataTable" class="table table-striped table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Contractor Name</th>
+                        <th>Company</th>
+                        <th>Roof Size (sqft)</th>
+                        <th>Roof Type</th>
+                        <th>Project State</th>
+                        <th>Project Date</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                      <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ========== table section end ========== -->
+        </div>
+      </section>
+      <!-- ========== section end ========== -->
+
+      <!-- ========== footer start =========== -->
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 order-last order-md-first">
+              <div class="copyright text-center text-md-start">
+                <p class="text-sm"></p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="terms d-flex justify-content-center justify-content-md-end">
+                <a href="#0" class="text-sm">Term & Conditions</a>
+                <a href="#0" class="text-sm ml-15">Privacy & Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- ========== footer end =========== -->
+    </main>
+    <!-- ======== main-wrapper end =========== -->
+
+    <!-- ========= All Javascript files linkup ======== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <style>
+        .card-style {
+          width: 100%;
+          max-width: 8000px;
+        }
+      
+        .table-responsive {
+          width: 100%;
+          overflow-x: auto;
+        }
+      
+        table#dataTable {
+          width: 100% !important;
+          min-width: 1000px; /* Force a wider min width if you want scrolling */
+          text-align: center; 
+        }
+      
+        /* Optional: to make it use full screen width */
+        .container,
+        .row,
+        .col-lg-12 {
+          max-width: 100% !important;
+        }
+      </style>
+
+<script>
+window.onload = () => {
+  fetch('http://localhost:5000/quotes')
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const tableBody = document.getElementById('tableBody');
+      const dateFilter = document.getElementById('dateFilter');
+      const stateFilter = document.getElementById('stateFilter');
+      const companyFilter = document.getElementById('companyFilter');
+      const roofFilter = document.getElementById('roofFilter');
+      const yearFilter = document.getElementById('yearFilter');
+      const clearFiltersButton = document.getElementById('clearFiltersButton');
+  
+      if (!tableBody || !dateFilter || !stateFilter || !companyFilter || !roofFilter || !yearFilter || !clearFiltersButton) return;
+  
+      const uniqueMonths = new Set();
+      const uniqueStates = new Set();
+      const uniqueCompanies = new Set();
+      const uniqueRoofs = new Set();
+      const uniqueYears = new Set();
+  
+      const formatMonth = (dateStr) => {
+        const date = new Date(dateStr);
+        return date.toLocaleString('default', { month: 'long' });  // Only returns the month
+      };
+  
+      data.forEach((item) => {
+        const month = formatMonth(item.project_date); // Get only the month
+        const year = new Date(item.project_date).getFullYear(); // Extract year separately
+        const state = item.project_state;
+        const company = item.company;
+        const roof = item.roof_type;
+
+        uniqueMonths.add(month);  // Store unique months
+        uniqueStates.add(state);
+        uniqueCompanies.add(company);
+        uniqueRoofs.add(roof);
+        uniqueYears.add(year);  // Store unique years
+  
+        const row = document.createElement('tr');
+        row.setAttribute('data-month', month); // Set the month only
+        row.setAttribute('data-state', state);
+        row.setAttribute('data-company', company);
+        row.setAttribute('data-roof', roof);
+        row.setAttribute('data-year', year); // Set the year for year-based filtering
+  
+        row.innerHTML = `
+          <td>${item.contractor_name}</td>
+          <td>${item.company}</td>
+          <td>${item.roof_size_sqft}</td>
+          <td>${item.roof_type}</td>
+          <td>${item.project_state}</td>
+          <td>${item.project_date}</td>
+        `;
+        tableBody.appendChild(row);
+      });
+  
+      // Fill Month dropdown (without year)
+      [...uniqueMonths]
+        .sort() // This will sort by month name
+        .forEach((month) => {
+          const option = document.createElement('option');
+          option.value = month;
+          option.textContent = month;
+          dateFilter.appendChild(option);
+        });
+  
+      // Fill State dropdown
+      [...uniqueStates]
+        .sort()
+        .forEach((state) => {
+          const option = document.createElement('option');
+          option.value = state;
+          option.textContent = state;
+          stateFilter.appendChild(option);
+        });
+  
+      // Fill Company dropdown
+      [...uniqueCompanies]
+        .sort()
+        .forEach((company) => {
+          const option = document.createElement('option');
+          option.value = company;
+          option.textContent = company;
+          companyFilter.appendChild(option);
+        });
+  
+      // Fill Roof Type dropdown
+      [...uniqueRoofs]
+        .sort()
+        .forEach((roof) => {
+          const option = document.createElement('option');
+          option.value = roof;
+          option.textContent = roof;
+          roofFilter.appendChild(option);
+        });
+
+      // Fill Year dropdown
+      [...uniqueYears]
+        .sort((a, b) => a - b)
+        .forEach((year) => {
+          const option = document.createElement('option');
+          option.value = year;
+          option.textContent = year;
+          yearFilter.appendChild(option);
+        });
+
+      // Filtering function
+      const filterRows = () => {
+        const selectedMonth = dateFilter.value;
+        const selectedState = stateFilter.value;
+        const selectedCompany = companyFilter.value;
+        const selectedRoof = roofFilter.value;
+        const selectedYear = yearFilter.value;
+  
+        const rows = tableBody.querySelectorAll('tr');
+        rows.forEach((row) => {
+          const rowMonth = row.getAttribute('data-month'); // This will now only contain the month name
+          const rowState = row.getAttribute('data-state');
+          const rowCompany = row.getAttribute('data-company');
+          const rowRoof = row.getAttribute('data-roof');
+          const rowYear = row.getAttribute('data-year'); // We still need to use the year for year-based filtering
+      
+          let showRow = true;
+  
+          if (selectedMonth !== 'all' && rowMonth !== selectedMonth) {
+            showRow = false;
+          }
+  
+          if (selectedState !== 'all' && rowState !== selectedState) {
+            showRow = false;
+          }
+  
+          if (selectedCompany !== 'all' && rowCompany !== selectedCompany) {
+            showRow = false;
+          }
+  
+          if (selectedRoof !== 'all' && rowRoof !== selectedRoof) {
+            showRow = false;
+          }
+  
+          if (selectedYear !== 'all' && rowYear !== selectedYear) {
+            showRow = false;
+          }
+  
+          row.style.display = showRow ? '' : 'none';
+        });
+      };
+  
+      // Add event listeners to the filters
+      dateFilter.addEventListener('change', filterRows);
+      stateFilter.addEventListener('change', filterRows);
+      companyFilter.addEventListener('change', filterRows);
+      roofFilter.addEventListener('change', filterRows);
+      yearFilter.addEventListener('change', filterRows);
+  
+      // Add event listener for the Clear Filters button
+      clearFiltersButton.addEventListener('click', () => {
+        // Reset all filter dropdowns to 'all'
+        dateFilter.value = 'all';
+        stateFilter.value = 'all';
+        companyFilter.value = 'all';
+        roofFilter.value = 'all';
+        yearFilter.value = 'all';
+  
+        // Re-display all rows
+        const rows = tableBody.querySelectorAll('tr');
+        rows.forEach((row) => {
+          row.style.display = '';
+        });
+      });
+    });
+};
+
+  </script>
+  
+    
+  
+  </body>
+</html>
