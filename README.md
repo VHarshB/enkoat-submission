@@ -76,3 +76,7 @@ This dataset simulates 1000+ roofing project entries across various states, roof
 - Add authentication & authorization
 - Enhance dashboard with more interactive visualizations
 - Add features like data filtering, PDF report export, and Google Maps heatmap
+
+## 📸 Screenshots
+
+  ![Screenshot](https://github.com/VHarshB/enkoat-submission/blob/main/screenshots/Screenshot%202025-04-18%20232312.png)
