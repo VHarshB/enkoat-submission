@@ -63,7 +63,7 @@ Simply open index.html in your browser.
 
 Mock dataset used for dashboard visualization is provided in:
 ```bash
-encode-dashboard/dataset.csv
+dataset.csv
 ```
 This dataset simulates 1000+ roofing project entries across various states, roof types, and sizes.
 
