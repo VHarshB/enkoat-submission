@@ -80,3 +80,11 @@ This dataset simulates 1000+ roofing project entries across various states, roof
 ## 📸 Screenshots
 
   ![Screenshot](https://github.com/VHarshB/enkoat-submission/blob/main/screenshots/Screenshot%202025-04-18%20232312.png)
+
+  ![Screenshot](https://github.com/VHarshB/enkoat-submission/blob/main/screenshots/Screenshot%202025-04-18%20232337.png)
+
+  ![Screenshot](https://github.com/VHarshB/enkoat-submission/blob/main/screenshots/Screenshot%202025-04-18%20232350.png)
+
+  ![Screenshot](https://github.com/VHarshB/enkoat-submission/blob/main/screenshots/Screenshot%202025-04-18%20232423.png)
+
+  
